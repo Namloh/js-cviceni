@@ -18,11 +18,45 @@
         </nav>
     </header>
 
-    <main class="obsah">
-        <section  class="gallery">
-            <img class="obr" id="provaz" src="./images/noose.jpg">
-
+      <main class="obsah">
+        <section class="gallery" id="gallery">
+            <img class="obr" id="provaz" onclick="openImg('2provaz')" src="./images/noose.jpg">
+            <img class="obr" id="skull" onclick="openImg('2skull')" src="./images/skull.jpg">
+            <img class="obr" id="feet" onclick="openImg('2feet')" src="./images/feet.jpg">
+            <img class="obr" id="hole" onclick="openImg('2hole')" src="./images/hole.jpg">
+            <img class="obr" id="gyard" onclick="openImg('2gyard')" src="./images/gyard.jpg">
+            <img class="obr" id="007" onclick="openImg('2007')" src="./images/007.jpg">
         </section>
+ 
+        <section  id="hidden-gallery">
+            <div id="2provaz" onclick="closeImg('2provaz')">
+                <span class="close cursor" onclick="closeImg('2provaz')">&times;</span>
+                <img class="obr"  src="./images/noose.jpg">
+            </div>
+            <div id="2skull" onclick="closeImg('2skull')">
+                <span class="close cursor" onclick="closeImg('2skull')">&times;</span>
+                <img class="obr"  src="./images/skull.jpg">
+            </div>
+            <div id="2feet" onclick="closeImg('2feet')">
+                <span class="close cursor" onclick="closeImg('2feet')">&times;</span>
+                <img class="obr"  src="./images/feet.jpg">
+            </div>
+            <div id="2hole" onclick="closeImg('2hole')">
+                <span class="close cursor" onclick="closeImg('2hole')">&times;</span>
+                <img class="obr"  src="./images/hole.jpg">
+            </div>
+            <div id="2gyard" onclick="closeImg('2gyard')">
+                <span class="close cursor" onclick="closeImg('2gyard')">&times;</span>
+                <img class="obr"  src="./images/gyard.jpg">
+            </div>
+            <div id="2007" onclick="closeImg('2007')">
+                <span class="close cursor" onclick="closeImg('2007')">&times;</span>
+                <img class="obr"  src="./images/007.jpg">
+            </div>
+            <figcaption id="alert" class="alert cursor">Tento obsah je pod paywallou, na kterou stejně nemáš. Chudej šupáku!</figcaption>
+        </section>
+
+      
     </main>
 </body>
 </html>
