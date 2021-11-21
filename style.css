@@ -32,7 +32,7 @@ a{
     font-size: large;
 }
 
-img{
+section .obr{
     height: 100%;
     width: 100%;
     transition: 0.5s;
@@ -60,9 +60,7 @@ ul {
         "skull skull gyard 007";
     grid-gap: 10px;
 }
-.gallery .obr:hover{
-    box-shadow: 3px 10px 3px black;
-    
+.gallery .obr:hover{   
     transform: scale(1.1);
 
 }
@@ -105,9 +103,108 @@ ul {
     font-weight: bold;
   }
   
-  .close:hover,
-  .close:focus {
-    color: #999;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover,
+.close:focus {
+color: #999;
+text-decoration: none;
+cursor: pointer;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.pov{
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+h2{
+    color: white;
+    font-size: 2.5em;
+    margin-top: 5%;
+    text-align: center;
+}
+.mySlides {
+    display: none;
+
+}
+.bruv{
+    height: 600px;
+    max-height: 600px;
+}
+
+
+.slideshow-container {
+  max-width: 1200px;
+  top: 115%;
+
+}
+
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 20%;
+}
+
+
+.mapa{
+    position: absolute;
+    top: 200%;
+}
+iframe{
+    height: 500px;
+    width: 1200px;
+}
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
   }
+
+

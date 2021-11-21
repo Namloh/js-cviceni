@@ -6,7 +6,8 @@
     <title>Udělej to, srabe!</title>
     <link href="./style.css" rel="stylesheet">
     <script src="./js.js"></script>
-</head>
+    </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <body>
     <header>
         <nav>
@@ -56,7 +57,38 @@
             <figcaption id="alert" class="alert cursor">Tento obsah je pod paywallou, na kterou stejně nemáš. Chudej šupáku!</figcaption>
         </section>
 
-      
+    <div class="pov">
+        <h2>POV konečně jsi to udělal</h2>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img class="bruv" src="./images/grave1.jpg" style="width:100%">
+                <div class="text">Super počasí tady dole</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img class="bruv" src="./images/grave2.jpg" style="width:100%">
+                <div class="text">Fakt, ver mi kamo brasko</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img class="bruv" src="./images/hole.jpg" style="width:100%">
+                <div class="text">Nebudeš litovat</div>
+            </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+        </div>
+    </div>
+    <div class="mapa">
+        <h2>Slyšel jsem, že tady maj super jídlo</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36759.64443931112!2d138.625904897256!3d35.47645834539971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601be721e912db77%3A0xed043493c8ad92e1!2sAokigahara!5e0!3m2!1sen!2scz!4v1637511019263!5m2!1sen!2scz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
     </main>
 </body>
 </html>
