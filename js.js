@@ -27,6 +27,9 @@ function closeImg(n){
 var slideIndex = 1;
 window.onload = function() {
     showSlides(slideIndex);
+    makeNavLinksSmooth( );
+    spyScrolling( );
+    
 };
 
 function plusSlides(n) {
@@ -43,5 +46,38 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";  
 
-  }
+}
 
+
+const makeNavLinksSmooth = ( ) => {
+    const navLinks = document.querySelectorAll( '.nav-link' );
+  
+    for ( let n in navLinks ) {
+      if ( navLinks.hasOwnProperty( n ) ) {
+        navLinks[ n ].addEventListener( 'click', e => {
+          e.preventDefault( );
+          document.querySelector( navLinks[ n ].hash )
+            .scrollIntoView( {
+              behavior: "smooth"
+            } );
+        } );
+      }
+    }
+  }
+  
+  const spyScrolling = ( ) => {
+    const sections = document.querySelectorAll( '.kus' );
+  
+    window.onscroll = ( ) => {
+      const scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
+      console.log(scrollPos);
+      for ( let s in sections )
+        if ( sections.hasOwnProperty( s ) && sections[ s ].offsetTop <= scrollPos+150 ) {
+          const id = sections[ s ].id;
+          console.log(id);
+          document.querySelector( '.active' ).classList.remove( 'active' );
+          document.querySelector("a[href*=" + "\'" + "#" + id + "\'" + "]").classList.add( 'active' );
+        }
+    } 
+  }
+  

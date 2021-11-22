@@ -6,10 +6,17 @@
     <title>Udělej to, srabe!</title>
     <link href="./style.css" rel="stylesheet">
     <script src="./js.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     </head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <body>
     <header>
+        <nav>         
+            <a class="nav-link active" href="#gallery" >Na</a>
+            <a class="nav-link" href="#hidden-gallery" >co</a>
+            <a class="nav-link" href="#pov">furt</a>
+            <a class="nav-link" href="#mapa">čekáš?</a>
+            <a class="nav-link" href="#myChart">bruh</a>
+        </nav>
         <nav>
             <ul>
                 <li><a>Udělej</a></li>
@@ -20,7 +27,7 @@
     </header>
 
       <main class="obsah">
-        <section class="gallery" id="gallery">
+        <section class="gallery kus" id="gallery">
             <img class="obr" id="provaz" onclick="openImg('2provaz')" src="./images/noose.jpg">
             <img class="obr" id="skull" onclick="openImg('2skull')" src="./images/skull.jpg">
             <img class="obr" id="feet" onclick="openImg('2feet')" src="./images/feet.jpg">
@@ -29,7 +36,7 @@
             <img class="obr" id="007" onclick="openImg('2007')" src="./images/007.jpg">
         </section>
  
-        <section  id="hidden-gallery">
+        <section class="kus"  id="hidden-gallery">
             <div id="2provaz" onclick="closeImg('2provaz')">
                 <span class="close cursor" onclick="closeImg('2provaz')">&times;</span>
                 <img class="obr"  src="./images/noose.jpg">
@@ -57,7 +64,7 @@
             <figcaption id="alert" class="alert cursor">Tento obsah je pod paywallou, na kterou stejně nemáš. Chudej šupáku!</figcaption>
         </section>
 
-    <div class="pov">
+    <div id="pov" class="pov kus">
         <h2>POV konečně jsi to udělal</h2>
         <div class="slideshow-container">
 
@@ -84,10 +91,41 @@
           
         </div>
     </div>
-    <div class="mapa">
+    <div id="mapa" class="mapa kus">
         <h2>Slyšel jsem, že tady maj super jídlo</h2>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36759.64443931112!2d138.625904897256!3d35.47645834539971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601be721e912db77%3A0xed043493c8ad92e1!2sAokigahara!5e0!3m2!1sen!2scz!4v1637511019263!5m2!1sen!2scz" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+
+
+    <canvas id="myChart" width="150px" height="50px" class="kus"></canvas>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Today'],
+                datasets: [{
+                    label: 'Number of suicides(you)',
+                    data: [1],
+                    backgroundColor: [
+                        'rgba(0,0,0, 0.5)',
+
+                    ],
+                    borderColor: [
+                        'rgba(0,0,0, 1)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        </script>
 
     </main>
 </body>
