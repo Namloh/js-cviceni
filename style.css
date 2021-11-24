@@ -32,7 +32,7 @@ a{
     text-decoration: none;
     color:white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: large;
+    font-size: 1.5em;
 }
 
 section .obr{
@@ -63,10 +63,13 @@ ul {
         "skull skull gyard 007";
     grid-gap: 10px;
 
+
 }
 .gallery .obr:hover{   
-    transform: scale(1.1);
-
+    transform: rotateZ(3deg);
+}
+#provaz:hover{
+    transform: rotateZ(1.4deg);
 }
 
 #provaz{
@@ -224,3 +227,7 @@ canvas{
 .nav-link{
     color: black;
 }
+.nav-link:hover{
+    color: white;
+}
+
